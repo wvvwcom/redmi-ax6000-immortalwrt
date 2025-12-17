@@ -53,6 +53,8 @@ sed -i 's/192.168.6.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 merge_package master https://github.com/coolsnowwolf/packages         feeds/packages/lang       lang/golang
 merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/packages/net        net/frp
 merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/luci/applications   applications/luci-app-frpc
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/net        net/zerotier
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-zerotier
 
 # 非替换的包，需要直接拷贝到package目录，不然无法安装
 merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-timecontrol
