@@ -49,10 +49,31 @@ sed -i 's/192.168.6.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 # 设置密码为空
 # sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 
+# 旧版本frpc_0.39.0，暂时废弃
+#merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/packages/net        net/frp
+#merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/luci/applications   applications/luci-app-frpc
+
+
 # 替换包版本，xray编译要求高版本golang
 merge_package master https://github.com/coolsnowwolf/packages         feeds/packages/lang       lang/golang
-merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/packages/net        net/frp
-merge_package main https://github.com/wvvwcom/openwrt-package-frpc    feeds/luci/applications   applications/luci-app-frpc
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/utils      utils/ttyd
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-ttyd
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/utils      utils/watchcat
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-watchcat
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/net        net/frp
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-frpc
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/net        net/wifischedule
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-wifischedule
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/net        net/etherwake
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-wol
+
+merge_package master https://github.com/immortalwrt/packages          feeds/packages/net        net/zerotier
+merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-zerotier
 
 # 非替换的包，需要直接拷贝到package目录，不然无法安装
 merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-timecontrol
