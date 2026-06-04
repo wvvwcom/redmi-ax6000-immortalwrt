@@ -76,8 +76,8 @@ merge_package master https://github.com/immortalwrt/packages          feeds/pack
 merge_package master https://github.com/immortalwrt/luci              feeds/luci/applications   applications/luci-app-zerotier
 
 # 非替换的包，需要直接拷贝到package目录，不然无法安装
-merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-timecontrol
-merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-socat
+# merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-timecontrol
+# merge_package main https://github.com/Lienol/openwrt-package          package/feeds/luci   luci-app-socat
 # EasyTier
 merge_package main https://github.com/EasyTier/luci-app-easytier.git  package/feeds/packages    easytier
 merge_package main https://github.com/EasyTier/luci-app-easytier.git  package/feeds/luci        luci-app-easytier

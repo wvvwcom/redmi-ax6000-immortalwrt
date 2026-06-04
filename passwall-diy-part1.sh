@@ -17,10 +17,11 @@
 # echo 'src-git alist https://github.com/sbwml/luci-app-alist' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # passwall
-sed -i '1i src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' feeds.conf.default
-sed -i '2i src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
-sed -i '3i src-git passwall2_luci https://github.com/xiaorouji/openwrt-passwall2.git;main' feeds.conf.default
+sed -i '1i src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main' feeds.conf.default
+sed -i '2i src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main' feeds.conf.default
+sed -i '3i src-git passwall2_luci https://github.com/Openwrt-Passwall/openwrt-passwall2.git;main' feeds.conf.default
 sed -i '4i src-git vnt https://github.com/lmq8267/luci-app-vnt.git;main' feeds.conf.default
+sed -i '5i src-git timecontrol  https://github.com/sirpdboy/luci-app-timecontrol' feeds.conf.default
 # helloworld
 # sed -i '1i src-git helloworld https://github.com/fw876/helloworld.git;master' feeds.conf.default
 
